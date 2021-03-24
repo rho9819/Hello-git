@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title>배경색바꾸기</title>
+<script>
+    let color=["white", "yellow", "aqua", "purple"];
+            
+    let i=0;
+
+    function changeColor(){
+        // let bodyTag = document.getElementById("theBody");
+        // i++;
+        if(i==color.length-1){
+            i=0;
+        }else{
+            i++
+        }
+        document.body.style.backgroundColor = color[i];
+        // let bodyTag = document.getElementById("thebody");
+        // bodyTag.style.background = color[i];
+    }
+
+</script>
+</head>
+<body id="theBody">
+  <button onclick="changeColor();">배경색 바꾸기</button>
+</body>
+</html>
