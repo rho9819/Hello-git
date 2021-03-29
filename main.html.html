@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>WEB</h1>
+    <button class="btn" id = "btn"  onclick="changeColor();">night</button>
+    <ol>
+    <li><a href="http://127.0.0.1:5500/1.HTML.html" target="_blank">HTML</a></li>
+    <li><a href="http://127.0.0.1:5500/2.CSS.html" target="_blank">CsSS</a></li>
+    <li><a href="http://127.0.0.1:5500/3.JavaScript.html" target="_blank">JavaScript</a></li>
+</ol>
+<h2>WEB</h2>
+<p>
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto libero eaque non velit, reiciendis eum por <br>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur soluta nostrum minus deleniti dolorum consectetur suscipit?<br> 
+Totam ipsam recusandae eum dolore voluptatem, ipsa quia non illo rem placeat, praesentium at?<br>
+ro doloremque, mollitia fugiat illo possimus, rem perferendis est ullam laudantium perspiciatis pariatur at modi. <br>
+</p>
+<script>
+   let color=["white","black"];
+    let text = ["day", "night"]
+            let i=0;
+            let k = 0;
+            function changeColor(){
+                let bodyTag = document.getElementById("theBody");
+                // i++;
+                if(i==color.length-1){
+                    i=0;
+                }else{
+                    i++
+                }
+                document.body.style.backgroundColor = color[i];
+                document.getElementById("btn").innerHTML = text[i];
+                // let bodyTag = document.getElementById("thebody");
+                // bodyTag.style.background = color[i];
+                
+            }
+</script>
+</body>
+</html>
