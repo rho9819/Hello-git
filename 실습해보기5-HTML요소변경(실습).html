@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1 id="first">HTML 요소(element)를 찾는 방법1</h1>
+    <ul id="container_1" class = "container1">
+        <li id="li1">HTML</li>
+        <li class="li2">CSS</li>
+        <li class="li3">JavaScript</li>
+    </ul>
+    <ol id="container_2" class = "container2">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <script type="text/javascript">
+        document.body.style.backgroundColor = 'lightblue';
+
+
+        // getElementById() 사용
+        // id 'first'를 찾아서 h1 태그의 제목의 색상을 red로 변경
+        var t1 = document.getElementById("first");
+        t1.style.color = "red";
+
+        // getElementsByTagName() 사용
+        // 전체 li 태그를 찾아서 배경색을 lightgreen으로 변경
+        let t2 = document.getElementsByTagName('li');
+        for(let i=0; i<t2.length; i++){
+            t2[i].style.backgroundColor = 'lightgreen';
+        }
+          
+
+        // getElementByClassName() 사용
+        // class 'li2'을 찾아서 배경색을 gray로 변경
+        t3 = document.getElementsByClassName('li2')[0];
+        t3.style.backgroundColor = 'gray';
+          
+        // querySelector() 사용
+        // CSS 선택자로 li3를 찾아서 gray로 배경색 변경
+        document.querySelector('.li3').style.backgroundColor = 'gray'; // 하나만 변경
+
+        // querySelectorAll() 사용
+        // CSS 선택자로 전체 li 태그를 찾아서 배경색을 gray로 변경   
+        let t5 = document.querySelectorAll('li');
+        for(let i=0; i<t5.length; i++){
+            t2[i].style.backgroundColor = 'gray';
+        }
+          
+          
+        
+    </script>
+</body>
+</html>
