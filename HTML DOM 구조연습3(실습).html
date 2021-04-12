@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML과의 연계</title>
+<script type="text/javascript">
+	function createTag1() {
+		// <div> 엘리먼트를 만듭니다.
+		let div = document.createElement("div");
+		// 스타일 속성을 만듭니다.
+		let class1 = document.createAttribute('class');
+		
+		
+		// 스타일 속성의 값을 입력합니다.
+		class1.value = "class1"		
+		// 만들어둔 엘리먼트에 속성을 적용합니다.
+		div.setAttributeNode(class1);
+
+		
+		// 문서의 <body> 에 하위 노드로 엘리먼트를 붙여넣습니다.
+		document.body.appendChild(div);
+	}
+	
+	function createTag2() {
+	// <div> 엘리먼트를 만듭니다.
+		let div1 = document.createElement("div");
+		// 스타일 속성을 만듭니다.
+		let class2 = document.createAttribute('class');
+		
+		
+		// 스타일 속성의 값을 입력합니다.
+		class2.value = "class2"		
+		// 만들어둔 엘리먼트에 속성을 적용합니다.
+		div1.setAttributeNode(class2);
+
+		
+		// 문서의 <body> 에 하위 노드로 엘리먼트를 붙여넣습니다.
+		document.body.appendChild(div1);
+	}
+</script>
+<style>
+	.class1{
+		width: 100px;
+		height: 100px;
+		background-color: skyblue;
+	}
+	.class2{
+		width: 100px;
+		height: 100px;
+		background-color: black;
+	}
+</style>
+</head>
+<body>
+	<button onclick="createTag1();">객체 만들기 1</button>
+	<button onclick="createTag2();">객체 만들기 2</button>
+</body>
+</html>
